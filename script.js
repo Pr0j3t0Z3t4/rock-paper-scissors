@@ -1,12 +1,12 @@
-const start = ["Rock", "Paper", "Scissors"]
+let options = ["Rock", "Paper", "Scissors"]
 
-let input = prompt(" || 1 = Rock || 2 = Paper || 3 = Scissors || ")
-let humanPick = parseInt(input)
-
-const options = ["Rock", "Paper", "Scissors"];
 function getComputerChoice() {
-    const randomIndex = Math.floor(Math.random() * options.length);
-    return options[randomIndex];
+    const randomIndex = Math.floor(Math.random() * options.length)
+    return options[randomIndex]
 }
 
-console.log(humanPick);
+let input = prompt(" Selection Number || 1 = Rock || 2 = Paper || 3 = Scissors || ")
+let getHumanChoice = parseInt(input)
+
+console.log("Número digitado:", getHumanChoice)
+console.log("Escolha do PC:", getComputerChoice())
