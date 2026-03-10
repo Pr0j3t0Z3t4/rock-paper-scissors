@@ -1,15 +1,29 @@
+// criando variaveis
+const buttonRock = document.querySelector("#rock");
+const buttonPaper = document.querySelector("#paper");
+const buttonScissors = document.querySelector("#scissors"); 
 const options = ["rock", "paper", "scissors"];
 
+buttonRock.addEventListener("click", () => {
+    console.log("Selected Rock")
+});
+buttonPaper.addEventListener("click", () => {
+    console.log("Selected Paper");
+});
+buttonScissors.addEventListener("click", () => {
+    console.log("Selected Scissors");
+});
+    // 3. O próprio botão já sabe o que ele é. 
+    // Então, ao ser clicado, ele joga a string "rock" direto na sua função do jogo!
+    //playRound("rock", getComputerChoice()); 
+
+// função pra aletoriedade do computer utilizando variaveis
 function getComputerChoice() {
     const randomIndex = Math.floor(Math.random() * options.length);
     return options[randomIndex];
 }
 
-function getHumanChoice() {
-    let input = prompt("Enter your choice: Rock, Paper, or Scissors");
-    return input; 
-}
-
+// função contador do game score, jogo inicia 0 x 0 recebe escolha humana e aleatoriedade computer e as condições
 function playGame() {
     console.log("GAME STARTED: Best of 5 Rounds!");
 
@@ -41,8 +55,8 @@ function playGame() {
             computerScore++;
         }
     }
-
-    for (let i = 1; i <= 5; i++) {
+/* number of raunds*/
+    for (let i = 1; i <= 1; i++) {
         console.log(`--- ROUND ${i} ---`);
         
         const humanSelection = getHumanChoice();
